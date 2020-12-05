@@ -1,31 +1,25 @@
-curl https://data.cityofchicago.org/resource/wrvz-psew.csv | aws s3 cp - s3://nselman-mpcs53014/taxi/taxis.csv
-
-curl 
-https://data.cityofchicago.org/api/views/m6dm-c72p/rows.csv | aws s3 cp - s3://nselman-mpcs53014/rideshare/rideshare.csv
-
-
-https://data.cityofchicago.org/api/views/m\6dm-c72p/rows.csv
-
-
-curl https://data.cityofchicago.org/api/views/m6dm-c72p/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare.csv
-
-
-curl https://data.cityofchicago.org/api/views/wrvz-psew/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/taxi/taxi.csv
-
-curl https://data.cityofchicago.org/api/views/6iiy-9s97/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/cta/cta.csv
-
-
 RIDESHARE
 2020
-https://data.cityofchicago.org/api/views/rmc8-eqv4/rows.csv?accessType=DOWNLOAD
+curl https://data.cityofchicago.org/api/views/rmc8-eqv4/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare2019.csv
+
+2019
+curl https://data.cityofchicago.org/api/views/iu3g-qa69/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare2019.csv
 
 
 TAXI
 2020
-https://data.cityofchicago.org/api/views/r2u4-wwk3/rows.csv?accessType=DOWNLOAD
+curl https://data.cityofchicago.org/api/views/r2u4-wwk3/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare2019.csv
 
 2019
-https://data.cityofchicago.org/api/views/h4cq-z3dy/rows.csv?accessType=DOWNLOAD
+curl https://data.cityofchicago.org/api/views/h4cq-z3dy/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare2019.csv
 
 2018
-https://data.cityofchicago.org/api/views/vbsw-zws8/rows.csv?accessType=DOWNLOAD
+curl https://data.cityofchicago.org/api/views/vbsw-zws8/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/rideshare/rideshare2019.csv
+
+
+CTA
+curl https://data.cityofchicago.org/api/views/6iiy-9s97/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/cta/cta.csv
+
+
+COVID
+curl https://data.cityofchicago.org/api/views/naz8-j4nc/rows.csv | hdfs dfs -put - /tmp/nselman/proj/data/covid/covid.csv

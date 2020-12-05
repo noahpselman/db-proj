@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Result</title>
+    <link type="text/css" rel="stylesheet" href="table.css" />
+  </head>
+  <body>
+    <div style="margin-left:275px;margin-right:auto;display:inline-block;box-shadow: 10px 10px 5px #888888;border:1px solid #000000;-moz-border-radius-bottomleft:9px;-webkit-border-bottom-left-radius:9px;border-bottom-left-radius:9px;-moz-border-radius-bottomright:9px;-webkit-border-bottom-right-radius:9px;border-bottom-right-radius:9px;-moz-border-radius-topright:9px;-webkit-border-top-right-radius:9px;border-top-right-radius:9px;-moz-border-radius-topleft:9px;-webkit-border-top-left-radius:9px;border-top-left-radius:9px;background:white">
+      &nbsp;Average hourly for Year: {{year}} Month: {{year}} Day Type: {{daytype}} Pickup Area: {{pickup_community_area}} Dropoff Area: {{dropoff_community_area}} &nbsp;</div>
+    <p style="bottom-margin:10px">
+      <table class="CSS_Table_Example" style="width:60%;margin:auto;">
+	<tr>
+        <td>Hour</td>
+        <td>Rideshare Price/Mile</td>
+        <td>Rideshare Price/Minute</td>
+        <td>Rideshare Average Price</td>
+        <td>Rideshare Average Tip</td>
+        <td>Rideshare Rides</td>
+        <td>Taxi Price/Mile</td>
+        <td>Taxi Price/Minute</td>
+        <td>Taxi Average Price</td>
+        <td>Taxi Average Tip</td>
+        <td>Taxi Rides</td>
+    </tr>
+        {{#tableData}}
+	<tr>
+        <td><b>{{hour}}</b></td>
+        <td>{{price_per_mile_rs}}</td>
+        <td>{{price_per_minute_rs}}</td>
+        <td>{{price_per_ride_rs}}</td>
+        <td>{{tips_per_ride_rs}}</td>
+        <td>{{num_rides_rs}}</td>
+        <td>{{price_per_mile_taxi}}</td>
+        <td>{{price_per_minute_taxi}}</td>
+        <td>{{price_per_ride_taxi}}</td>
+        <td>{{tips_per_ride_taxi}}</td>
+        <td>{{num_rides_taxi}}</td>
+    </tr>
+        {{/tableData}}
+    </table>
+    </p>
+</body></html>

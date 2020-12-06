@@ -56,6 +56,8 @@ function cleanRow(row) {
     return row
 };
 
+
+
 function createRow(dataRow) {
     var displayRow = {}
     if (dataRow['has_rs']) {
@@ -100,6 +102,26 @@ function createRow(dataRow) {
     return displayRow
 };
 
+function counterToNumber(c) {
+    return Number(Buffer.from(c).readBigInt64BE());
+}
+
+
+function rowToMap(row) {
+    var stats = {}
+    row.forEach(function (item) {
+        // console.info(item['key'])
+        let hour = item['key'].split(":")[5];
+        let hourString = hour.substr(0,2).concat(" ", hour.substr(2, 2));
+        if ((hourString in stats === false)) {
+            stats[hourString] = {}
+        }
+        // we can call counterToNumber here after we adjust the hbase table
+        stats[hourString][item['column']] = Number(item['$'])
+    });
+    return stats;
+}
+
 function createEmptyRow() {
     const emptyRow = {}
     cols.forEach(function(col) {
@@ -127,4 +149,9 @@ function orderHours(data) {
     return orderedTable
 };
 
-module.exports = { createRow, createEmptyRow, orderHours };
+function isNumber(string) {
+    if (typeof string != "string" || string === '') return false
+    return !isNaN(string) && !isNaN(parseFloat(string))
+}
+
+module.exports = { orderHours, rowToMap, isNumber };

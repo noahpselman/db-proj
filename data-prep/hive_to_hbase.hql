@@ -13,16 +13,16 @@ num_rides_taxi BIGINT)
 STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 WITH SERDEPROPERTIES ('hbase.columns.mapping' =
 ':key,
-stats:duration_seconds_rs,
-stats:duration_seconds_taxi,
-stats:miles_tenths_rs,
-stats:miles_tenths_taxi,
-stats:trip_total_cents_rs,
-stats:trip_total_cents_taxi,
-stats:tip_cents_rs,
-stats:tip_cents_taxi,
-stats:num_rides_rs,
-stats:num_rides_taxi')
+stats:duration_seconds_rs#b,
+stats:duration_seconds_taxi#b,
+stats:miles_tenths_rs#b,
+stats:miles_tenths_taxi#b,
+stats:trip_total_cents_rs#b,
+stats:trip_total_cents_taxi#b,
+stats:tip_cents_rs#b,
+stats:tip_cents_taxi#b,
+stats:num_rides_rs#b,
+stats:num_rides_taxi#b')
 TBLPROPERTIES ('hbase.table.name' = 'chicago_transportation_hourly');
 
 INSERT OVERWRITE TABLE chicago_transportation_hourly_hbase

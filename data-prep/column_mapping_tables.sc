@@ -24,3 +24,4 @@ val daytype_map = Seq(
   (7, "Weekend"),
 ).toDF("day", "daytype")
 daytype_map.createOrReplaceTempView("daytype_map")
+

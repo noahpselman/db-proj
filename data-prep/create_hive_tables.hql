@@ -15,7 +15,7 @@ WITH SERDEPROPERTIES (
     "quoteChar"     = "\""
 )
 STORED AS TEXTFILE
-    location '/tmp/nselman/proj/data/cta';
+    location '/tmp/nselman/proj/data/cta'
 TBLPROPERTIES (
     "skip.header.line.count"="1")
 ) ;
@@ -70,9 +70,9 @@ WITH SERDEPROPERTIES (
     "quoteChar"     = "\""
 )
 STORED AS TEXTFILE
-    location '/tmp/nselman/proj/data/rideshare';
+    location '/tmp/nselman/proj/data/rideshare'
 TBLPROPERTIES (
-    "skip.header.line.count"="1")
+    "skip.header.line.count"="1"
 ) ;
 
 
@@ -100,7 +100,7 @@ CREATE TABLE rideshare_orc
     dropoff_centroid_longitude STRING,
     dropoff_centroid_location STRING
 )
-STORE AS orc
+STORED AS orc
 
 INSERT OVERWRITE TABLE rideshare_orc select * from rideshare
 WHERE start_time IS NOT NULL AND distance_miles IS NOT NULL
@@ -127,8 +127,8 @@ CREATE EXTERNAL TABLE taxis
     tolls FLOAT,
     additional_charges FLOAT,
     trip_total FLOAT,
+    payment_type STRING,
     company STRING,
-    shared_trip_authorized STRING,
     pickup_centroid_latitude STRING,
     pickup_centroid_longitude STRING,
     pickup_centroid_location STRING,
@@ -143,15 +143,16 @@ WITH SERDEPROPERTIES (
     "quoteChar"     = "\""
 )
 STORED AS TEXTFILE
-    location '/tmp/nselman/proj/data/taxi';
+    location '/tmp/nselman/proj/data/taxi'
 TBLPROPERTIES (
-    "skip.header.line.count"="1")
+    "skip.header.line.count"="1"
 ) ;
 
 
 CREATE TABLE taxis_orc
 (
     trip_id STRING,
+    taxi_id STRING,
     start_time STRING,
     end_time STRING,
     duration_seconds STRING,
@@ -162,10 +163,11 @@ CREATE TABLE taxis_orc
     dropoff_community_area STRING,
     fare FLOAT,
     tip FLOAT,
+    tolls FLOAT,
     additional_charges FLOAT,
     trip_total FLOAT,
-    shared_trip_authorized STRING,
-    number_pools BIGINT,
+    payment_type STRING,
+    company STRING,
     pickup_centroid_latitude STRING,
     pickup_centroid_longitude STRING,
     pickup_centroid_location STRING,
@@ -173,7 +175,7 @@ CREATE TABLE taxis_orc
     dropoff_centroid_longitude STRING,
     dropoff_centroid_location STRING
 )
-STORE AS orc
+STORED AS orc
 
 INSERT OVERWRITE TABLE taxis_orc select * from taxis
 WHERE start_time IS NOT NULL AND distance_miles IS NOT NULL

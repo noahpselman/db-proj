@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41bd7c6d-337a-427f-8c8e-a563d0255a70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/data-prep.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/join_vertical.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.scala-ide.sdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/chicago-transportation-speed-layer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/src/main/scala/StreamWeather.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speed-layer/src/main/scala/WeatherReport.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/appspec.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/after_install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/application_start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/application_stop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/before_install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/chicago_transportation.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/chicago_transportation_v2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/hourly-result.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/hourly-rides.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/background-photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/elegant-aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/route-delays.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/result.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/submit-rides.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_deploy/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/sshConfigs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webapp/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appspec.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/after_install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/application_start.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/application_stop.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/before_install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/column_mapping_tables.sc" beforeDir="false" afterPath="$PROJECT_DIR$/column_mapping_tables.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_hive_tables.hql" beforeDir="false" afterPath="$PROJECT_DIR$/create_hive_tables.hql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hive_to_hbase.hql" beforeDir="false" afterPath="$PROJECT_DIR$/hive_to_hbase.hql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rideshare_prep.sc" beforeDir="false" afterPath="$PROJECT_DIR$/rideshare_prep.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_prep.sc" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_prep.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webapp/submit-rides.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/submit-rides.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webapp/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/utils.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1lJdQZEwVak4TWgFC5545dvK9bm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41bd7c6d-337a-427f-8c8e-a563d0255a70" name="Default Changelist" comment="" />
+      <created>1607319113186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607319113186</updated>
+      <workItem from="1607319114643" duration="7472000" />
+      <workItem from="1607372420552" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1196" y="974" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1607355332393">
+      <screen x="-1920" y="540" width="1920" height="1040" />
+    </state>
+    <state x="-1196" y="974" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/0.0.1536.824/-1920.540.1920.1040/3840.0.1920.1040@-1920.540.1920.1040" timestamp="1607355332393" />
+    <state x="477" y="145" width="582" height="534" key="find.popup" timestamp="1607357922117">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="145" width="582" height="534" key="find.popup/0.0.1536.824/-1920.540.1920.1040/3840.0.1920.1040@0.0.1536.824" timestamp="1607357922117" />
+  </component>
+</project>

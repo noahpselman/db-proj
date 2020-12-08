@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Route Delays</title>
+    <link type="text/css" rel="stylesheet" href="elegant-aero.css" />
+  </head>
+  <!-- Thanks to Mario C. E. Freese <mcefreese@gmail.com> for permission to use background image -->
+  <body style='background-image:URL("AirLines-white.jpg");background-repeat:no-repeat;background-position:center top;-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+  <p style="margin-bottom:2cm"/>
+  <form action="/submit_ride.html" style="width:400px;margin:0 auto ;padding-top:20px; padding-bottom:20px; background:#FFFFFF" method="get" target="results_iframe" class="elegant-aero">
+    <label>
+      <span>Year:</span>
+      <input type="text" name="year" value="2020"/>
+    </label>
+    <label>
+      <span>Month:</span>
+      <input type="text" name="month" value="01"/>
+    </label>
+    <label>
+      <span>Day Type:</span>
+      <input type="text" name="daytype" value="U"/>
+    </label>
+    <label>
+      <span>Pickup Community Area:</span>
+      <input type="text" name="pickup_community_area" value="1"/>
+    </label>
+    <label>
+      <span>Dropoff Community Area:</span>
+      <input type="text" name="dropoff_community_area" value="17"/>
+    </label>
+
+      <label>
+
+
+	<span></span> <input  type="submit" value="Submit">
+      </label>
+    </form>
+    <p style="margin-bottom:2cm"/>
+
+    <iframe frameBorder="0" name="results_iframe" style="display:block;width:70%;height:100%;margin-left:auto;margin-right:auto"/>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+    <title>Rideshare/Taxi Hourly Prices</title>
+    <link type="text/css" rel="stylesheet" href="elegant-aero.css" />
+    <style>
+        input::-webkit-calendar-picker-indicator {
+            display: none;/* remove default arrow */
+        }
+        .myarrow:after {
+            content: url(https://i.stack.imgur.com/i9WFO.png);
+            margin-left: -20px;
+            padding: .1em;
+            pointer-events:none;
+        }
+    </style>
+    <script>
+        <!-- https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using -->
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+</head>
+<body style='background-image:URL("background-photo.jpg");background-repeat:no-repeat;background-position:center top;-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+<p style="margin-bottom:2cm"/>
+<form action="/hourly-ride-areas.html" style="width:600px;height:200px;margin:0 auto;padding-top=200px;background:#FFFFFF" method="get" target="results_iframe" class="elegant-aero">
+    <div style="white-space: nowrap">
+
+        <label>
+            <span class="myarrow">
+            <span>Year:</span>
+            <input list="year" name="year"/>
+            <datalist id="year">
+                <option value="2018">
+                <option value="2019">
+                <option value="2020">
+            </datalist></span>
+        </label>
+        <label>
+            <span class="myarrow">
+            <span>Month:</span>
+            <input list="month" name="month"/>
+            <datalist id="month">
+                <option value="January">
+                <option value="February">
+                <option value="March">
+                <option value="April">
+                <option value="May">
+                <option value="June">
+                <option value="July">
+                <option value="August">
+                <option value="September">
+                <option value="October">
+                <option value="November">
+                <option value="December">
+            </datalist></span>
+        </label>
+        <label>
+            <span class="myarrow">
+            <span>Day Type:</span>
+            <input list="daytype" name="daytype"/>
+            <datalist id="daytype">
+              <option value="Weekday">
+              <option value="Weekend">
+            </datalist></span>
+        </label>
+
+        <label>
+            <span class="myarrow">
+            <span>Pickup Community Area:</span>
+            <input list="areas" name="pickup_community_area"/>
+            <datalist id="areas">
+              {{#areas}}
+                  <option value="{{key}}">
+              {{/areas}}
+            </datalist></span>
+        </label>
+        <label>
+            <span class="myarrow">
+            <span>Dropoff Community Area:</span>
+            <input list="areas" name="dropoff_community_area"/>
+            <datalist id="areas">
+              {{#areas}}
+              <option value="{{key}}">
+              {{/areas}}
+            </datalist></span>
+        </label>
+        <label>
+            <span>
+            <input style="padding:5px" type="submit" value="Submit">
+                </span>
+        </label>
+    </div>
+</form>
+<p style="margin-bottom:2cm"/>
+
+<iframe frameBorder="0" onload="resizeIframe(this)" name="results_iframe" style="display:block;width:70%;margin-left:auto;margin-right:auto"/>
+</body>
+</html>

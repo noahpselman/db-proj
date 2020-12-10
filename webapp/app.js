@@ -27,8 +27,8 @@ app.get('/hourly-ride-areas.html',function (req, res) {
 		filter: {type : "PrefixFilter",
 			value: key}, maxVersions: 1
 	}, function (err, rows) {
-    	// console.info("rows:", rows)
-		// console.info(err)
+    	console.info("rows:", rows)
+		console.info(err)
 		const data = utils.rowToMap(rows);
     	// console.info(data)
 
@@ -51,7 +51,7 @@ app.get('/hourly-ride-areas.html',function (req, res) {
 
 app.get('/hourly-rides.html', function (req, res) {
 	hclient.table('chicago_transportation_areas').scan({ maxVersions: 1}, (err, rows) => {
-		// console.info(rows)
+		console.info(rows)
 		var template = filesystem.readFileSync("hourly-rides.mustache").toString();
 		var html = mustache.render(template, {
 			areas : rows

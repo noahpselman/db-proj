@@ -1,0 +1,8 @@
+version: 0.0
+os: linux
+
+hooks:
+  ApplicationStop:
+    - location: bin/application_stop.sh
+      timeout: 120
+      runas: ec2-user

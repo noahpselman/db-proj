@@ -20,7 +20,56 @@ object StreamRides {
 
   val hbaseConnection = ConnectionFactory.createConnection(hbaseConf)
   val table = hbaseConnection.getTable(TableName.valueOf("chicago_transportation_hourly"))
-  
+
+
+  def upsertRides(rr: RideReport) : String = {
+    // How to write to an HBase table
+
+      val key = (rr.year + ":" + rr.month + ":" + rr.daytype +
+        ":" + rr.pickup_community_area + ":" + rr.dropoff_community_area +
+        ":" + rr.hour + ":" + rr.ridetype)
+      System.out.println("key:", key)
+
+      val maybeRow = table.get(new Get(Bytes.toBytes(key)))
+      System.out.println(maybeRow)
+      if (maybeRow.isEmpty) {
+        System.out.println("entered the if block where it's empty")
+        val put = new Put(Bytes.toBytes(key))
+        put.addColumn(Bytes.toBytes("stats"),
+          Bytes.toBytes("duration_seconds"), Bytes.toBytes(rr.duration_seconds))
+        put.addColumn(Bytes.toBytes("stats"),
+          Bytes.toBytes("miles_tenths"), Bytes.toBytes(rr.miles_tenths))
+        put.addColumn(Bytes.toBytes("stats"),
+          Bytes.toBytes("tip_cents"), Bytes.toBytes(rr.tip_cents))
+        //        put.addColumn(Bytes.toBytes("stats"),
+        //          Bytes.toBytes("additional_charges"), Bytes.toBytes(rr.tip_cents))
+        put.addColumn(Bytes.toBytes("stats"),
+          Bytes.toBytes("trip_total_cents"), Bytes.toBytes(rr.trip_total_cents))
+        put.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("num_rides"), Bytes.toBytes(1.toLong))
+        table.put(put)
+      }
+      else {
+        System.out.println("entered else block")
+        val inc = new Increment(Bytes.toBytes(key))
+        System.out.println("created increment")
+        inc.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("duration_seconds"), rr.duration_seconds)
+        System.out.println("finished duration finished")
+        inc.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("miles_tenths"), rr.miles_tenths)
+                System.out.println("miles_tenths finished")
+        inc.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("tip_cents"), rr.tip_cents)
+                System.out.println("tip_cents fnished")
+        //        increment.addColumn(Bytes.toBytes("stats"),
+        //          Bytes.toBytes("additional_charges"), rr.tip_cents)
+        inc.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("trip_total_cents"), rr.trip_total_cents)
+                System.out.println("trip_total_cents finish")
+        inc.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("num_rides"), 1)
+                System.out.println("num rides finished")
+        table.increment(inc)
+      }
+    return "Updated speed layer for Ride " + key
+    }
+
+
   def main(args: Array[String]) {
     if (args.length < 1) {
       System.err.println(s"""
@@ -57,59 +106,9 @@ object StreamRides {
     val serializedRecords = stream.map(_.value);
     val reports = serializedRecords.map(rec => mapper.readValue(rec, classOf[RideReport]))
 
-    // How to write to an HBase table
-    val batchStats = reports.map(rr => {
-      val key = (rr.year + ":" + rr.month + ":" + rr.daytype +
-        ":" + rr.pickup_community_area + ":" + rr.dropoff_community_area +
-        ":" + rr.hour + ":" + rr.ridetype)
-      System.out.println("key:", key)
+    val processedRides = reports.map(upsertRides)
+    processedRides.print()
 
-      val maybeRow = table.get(new Get(Bytes.toBytes(key)))
-      System.out.println(maybeRow)
-      if (maybeRow.isEmpty) {
-        System.out.println("entered the if block where it's empty")
-        val put = new Put(Bytes.toBytes(key))
-        put.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("duration_seconds"), Bytes.toBytes(rr.duration_seconds))
-        put.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("miles_tenths"), Bytes.toBytes(rr.miles_tenths))
-        put.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("tip_cents"), Bytes.toBytes(rr.tip_cents))
-//        put.addColumn(Bytes.toBytes("stats"),
-//          Bytes.toBytes("additional_charges"), Bytes.toBytes(rr.tip_cents))
-        put.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("trip_total_cents"), Bytes.toBytes(rr.trip_total_cents))
-        put.addColumn(Bytes.toBytes("stats"), Bytes.toBytes("num_rides"),
-          Bytes.toBytes(1.toLong))
-        table.put(put)
-      }
-      else {
-        System.out.println("entered else block")
-        val increment = new Increment(Bytes.toBytes(key))
-        System.out.println("created increment")
-        increment.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("duration_seconds"), rr.duration_seconds)
-        System.out.println("finished duration finished")
-        increment.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("miles_tenths"), rr.miles_tenths)
-        System.out.println("miles_tenths finished")
-        increment.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("tip_cents"), rr.tip_cents)
-        System.out.println("tip_cents fnished")
-//        increment.addColumn(Bytes.toBytes("stats"),
-//          Bytes.toBytes("additional_charges"), rr.tip_cents)
-        increment.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("trip_total_cents"), rr.trip_total_cents)
-        System.out.println("trip_total_cents finish")
-        increment.addColumn(Bytes.toBytes("stats"),
-          Bytes.toBytes("num_rides"), 1)
-        System.out.println("num rides finished")
-        table.increment(increment)
-      }
-    })
-    System.out.println("finished that block session")
-    batchStats.print()
-    
     // Start the computation
     ssc.start()
     ssc.awaitTermination()

@@ -122,6 +122,7 @@ function createRow(dataRow) {
 };
 
 function counterToNumber(c) {
+    console.info("c:", c)
     return Number(Buffer.from(c).readBigInt64BE());
 }
 
@@ -147,6 +148,7 @@ function rowToMap(row) {
             stats[hourString] = {}
         }
         // we can call counterToNumber here after we adjust the hbase table
+        console.info("calling counter to number with", item)
         stats[hourString][item['column'].concat("_", ridetype_str)] = counterToNumber(item['$'])
     });
     console.info('stats:', stats)

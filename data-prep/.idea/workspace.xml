@@ -20,65 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41bd7c6d-337a-427f-8c8e-a563d0255a70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data-prep.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/join_vertical.sc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/.settings/org.scala-ide.sdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/chicago-transportation-speed-layer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/src/main/scala/StreamWeather.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../speed-layer/src/main/scala/WeatherReport.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/appspec.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/after_install.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/application_start.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/application_stop.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/bin/before_install.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/chicago_transportation.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/chicago_transportation_v2.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/hourly-result.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/hourly-rides.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/background-photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/elegant-aero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/route-delays.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/switch.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/public/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/result.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/submit-rides.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../to_deploy/src/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webapp/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webapp/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webapp/.idea/sshConfigs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webapp/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appspec.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bin/after_install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bin/application_start.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bin/application_stop.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bin/before_install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/column_mapping_tables.sc" beforeDir="false" afterPath="$PROJECT_DIR$/column_mapping_tables.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_hive_tables.hql" beforeDir="false" afterPath="$PROJECT_DIR$/create_hive_tables.hql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/appspec.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/bin/after_install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/bin/application_start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/bin/application_stop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/bin/before_install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/hourly-result.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/hourly-rides.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/public/background-photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/public/elegant-aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/public/route-delays.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/public/switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/public/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/result.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/submit-rides.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../to_stop/stop_chicago_transportation.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/join_vertical.sc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/join_vertical.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hive_to_hbase.hql" beforeDir="false" afterPath="$PROJECT_DIR$/hive_to_hbase.hql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rideshare_prep.sc" beforeDir="false" afterPath="$PROJECT_DIR$/rideshare_prep.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxi_prep.sc" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_prep.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/src/main/scala/StreamRides.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/src/main/scala/StreamRides.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/target/analysis/compile" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/target/analysis/compile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/target/chicago-transportation-speed-layer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/target/chicago-transportation-speed-layer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/target/classes/StreamRides$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/target/classes/StreamRides$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/target/classes/StreamRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/target/classes/StreamRides.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../speed-layer/target/uber-chicago-transportation-speed-layer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../speed-layer/target/uber-chicago-transportation-speed-layer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../to_deploy/bin/application_start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../to_deploy/bin/application_start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../to_deploy/chicago_transportation.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../to_deploy/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../to_deploy/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../to_deploy/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../to_deploy/src/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../webapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webapp/submit-rides.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/submit-rides.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../webapp/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webapp/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +114,7 @@
       <updated>1607319113186</updated>
       <workItem from="1607319114643" duration="7472000" />
       <workItem from="1607372420552" duration="48000" />
+      <workItem from="1607575175617" duration="2273000" />
     </task>
     <servers />
   </component>
@@ -155,6 +131,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1196" y="974" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1607355332393">

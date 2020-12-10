@@ -45,7 +45,7 @@ val hourly_data = spark.sql(
   """
     SELECT
       CONCAT(year, ':', m.month_name, ':', daytype, ':', c.area_name, ':', d.area_name, ':', hour, ':', ridetype) AS key,
-      SUM(duration_seconds) AS duration_seconds,
+      CAST(FLOOR(SUM(duration_seconds)) AS BIGINT) AS duration_seconds,
       CAST(FLOOR(sum(distance_miles)*10) AS BIGINT) AS miles_tenths,
       CAST(FLOOR(sum(tip)*100) AS BIGINT) AS tip_cents,
       CAST(FLOOR(sum(additional_charges)*100) AS BIGINT) AS additional_charges_cents,

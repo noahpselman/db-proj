@@ -26,4 +26,4 @@ SELECT
     additional_charges_cents,
     trip_total_cents,
     num_rides
-FROM chicago_transportation_hourly
+FROM chicago_transportation_hourly;
